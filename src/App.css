@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --dark-color: #222222;
+  --primary-color: #7371f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar styles */
+.navbar-brand h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+.navbar-brand h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--primary-color);
+}
+
+.navbar-brand h2:nth-child(2) {
+  color: var(--primary-color);
+  animation: animate 4s ease-in-out infinite;
+}
+
+.navbar-brand span {
+  color: var(--primary-color);
+}
+
+.navbar_main {
+  height: 80px;
+  background-color: #222222;
+  background-blend-mode: color;
+}
+
+.nav_ul li {
+  padding: 0 0.6rem;
+}
+
+.nav_ul a {
+  font-size: 1.05rem;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-decoration: none; /* Ensure no underline */
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--primary-color) !important;
+}
+
+/* Home styles */
+.home {
+  height: 750px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 5rem 0;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  background-color: #000;
+  background-blend-mode: color;
+}
+
+.home_col {
+  padding-left: 2rem;
+}
+
+.home_col img {
+  border-radius: 100%;
+  width: 200px;
+  box-shadow: 0px 0px 164px 7px rgba(178, 168, 231, 0.54);
+}
+
+.home_col h1 {
+  font-size: 2.6rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.home_col h2 {
+  padding: 0.8rem 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.home_col h3 {
+  padding-top: 2rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.home_col h4 {
+  padding-top: 1rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 2.6rem;
+  text-align: center;
+  color: var(--primary-color);
+  display: block;
+}
+
+.text-transition {
+  display: block !important;
+}
+
+.home_col span {
+  color: var(--primary-color);
+}
+
+.home_text {
+  justify-content: center;
+}
+
+.home_btns {
+  padding-top: 2rem;
+}
+
+.home_btns a {
+  color: #fff !important;
+  text-decoration: none; /* Ensure no underline */
+}
+
+.btn0 {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.home_btn1 {
+  padding: 0.75rem 2rem;
+  border: none;
+  background-color: var(--primary-color);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border-radius: 5px;
+  margin: 0 0.5rem;
+}
+
+.home_btn2 {
+  padding: 0.75rem 2rem;
+  background-color: transparent;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border-radius: 5px;
+  border: 2px solid var(--primary-color);
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+.home_btn2:hover,
+.home_btn1:hover {
+  background-color: var(--dark-color);
+  transition: 0.4s linear;
+  transform: scale(1.02);
+  box-shadow: 0px 0px 20px 2px rgba(178, 168, 231, 0.54);
+}
+
+/* Skill Style Page */
+.skills {
+  /* background-image: url(./assets/skill-bg.jpg); */
+  background-color: #000;
+  background-position: center;
+  background-size: cover;
+  padding: 5rem 0;
+}
+.skills h1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.3rem;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.skill_col {
+  padding: 0.7rem;
+}
+
+.skill-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #eeedf0;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.skill-bar {
+  height: 8px;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.skill-percentage {
+  height: 8px;
+  background: var(--primary-color);
+  border-radius: 20px;
+  position: relative;
+  animation: fillBars 3s 3;
+}
+
+.skill-percentage::before {
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background: #fff5fd;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  top: -35px;
+  right: 0;
+  transform: transition(50%);
+}
+
+.skill-percentage::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #005a8d;
+  top: -20px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  border-radius: 2px;
+}
+
+.skill_col2 {
+  padding: 0 2rem;
+}
+.skill_col2 h3 {
+  color: #fff;
+  /* text-align: center !important; */
+  padding: 0.9rem 0.5rem;
+}
+
+/* Footer styles */
+.btn1 {
+  border: 0;
+  padding: 0.5rem 1.8rem;
+  color: #fff;
+  background-color: #01193c;
+}
+
+.btn2 {
+  border: 0;
+  padding: 0.5rem 1.2rem;
+  color: #fff;
+  background-color: #f60838;
+}
+
+.content {
+  flex: 1;
+}
+
+.Footer {
+  padding: 2rem 0;
+  margin-top: 15rem;
+}
+
+.Footer, .Last-footer {
+  background-color: #f8f9fa; /* Example background color */
+  padding: 20px 0;
+}
+
+.Last-footer {
+  background: #f8f9fa;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.Last-footer p {
+  color: #0c08f6;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.ft-1 h3 {
+  font-weight: 700;
+  font-family: cursive;
+  letter-spacing: 2px;
+  padding: 0.5rem 0;
+}
+
+.ft-1 span {
+  color: #0c08f6;
+}
+
+.ft-1 p {
+  padding: 0rem 5rem 0.8rem 0;
+  font-weight: 500;
+}
+
+.footer-icons i {
+  padding: 0.4rem 0.5rem;
+  background: #e1e1e1;
+  color: #0c08f6;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+}
+
+.footer-icons i:hover {
+  background: #f60838;
+  color: #fff;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.Footer h5 {
+  color: #0c08f6;
+}
+
+.ft-2 ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.ft-2 ul li {
+  padding: 0.35rem 0;
+  font-weight: 500;
+}
+
+.ft-2 ul a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.06rem;
+}
+
+.ft-3 p {
+  font-weight: 500;
+  padding: 0.1rem 0;
+  font-size: 1.06rem;
+}
+
+.ft-3 i {
+  padding-right: 0.5rem;
+}
